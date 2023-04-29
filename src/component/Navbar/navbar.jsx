@@ -6,7 +6,7 @@ function Navbar() {
         <div className='w-[90%]'>
         <ul className='flex justify-between cursor-pointer'>
             <div>
-                <li className='text-[color:var(--text-color)]'>Logo</li>
+                <li className='text-[color:var(--text-color)] text-[20px] font-bold'>Logo</li>
             </div>
             <div className='flex gap-x-5 items-center'> 
                 <li className='text-[color:var(--text-color)]' >Home</li>
