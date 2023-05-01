@@ -1,30 +1,21 @@
 import React from 'react'
 import {MdAlternateEmail, MdLockOutline} from "react-icons/md"
-import {BiUser} from "react-icons/bi"
 
 
-function Signup() {
+function Login() {
   return (
     <div>
-        
         <div className="form-wrapper min-h-screen [ p-4 md:p-6 lg:p-8 ] [ flex justify-center items-center ]">
             <form className="max-w-sm rounded-2xl text-[#1A2421] [ p-8 md:p-10 lg:p-10 ] morphism">
                 <h3 className="mb-1 text-md text-[#fff]/80">
-                    SignUp Required
+                    LogIn Required
                 </h3>
                 <h1 className="mb-6 uppercase font-bold [ text-xl md:text-2xl lg:text-2xl text-[#fff]/80 ]">
-                    Create An Account
+                    Register for Free
                 </h1>
                 <p className="mb-6 [ text-sm text-[#fff]/80 ]">
                     Enter your valid email and password for fields below
                 </p>
-
-                <div>
-                    <label htmlFor="name" className="form-label relative block mb-4 text-black/50 focus-within:text-[#333]">
-                        <BiUser className='abel-icon transition pointer-events-none [ w-6 h-6 ] [ absolute top-1/2 left-3 ] [ transform -translate-y-1/2 ]'/>
-                        <input className="form-input block w-full rounded-lg leading-none focus:outline-none placeholder-black/50  [ transition-colors duration-200 ] [ py-3 pr-3 md:py-4 md:pr-4 lg:py-4 lg:pr-4 pl-12 ] [ bg-black/20 focus:bg-black/25 ] [ text-[#333] focus:text-black ]" type="name" name="name" id="name" placeholder="FullName" />
-                    </label>
-                </div>
 
                 <div>
                     <label htmlFor="email" className="form-label relative block mb-4 text-black/50 focus-within:text-[#333]">
@@ -40,13 +31,12 @@ function Signup() {
                         <input type="password" id="password" placeholder='Password' name="password" required className="form-input block w-full rounded-lg leading-none focus:outline-none placeholder-black/50  [ transition-colors duration-200 ] [ py-3 pr-3 md:py-4 md:pr-4 lg:py-4 lg:pr-4 pl-12 ] [ bg-black/20 focus:bg-black/25 ] [ text-[#333] focus:text-black ]"/>
                     </label>
                 </div>
-                <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#63C5D2] hover:border hover:border-[#63C5D2] hover:bg-transparent ]">Create an Account
+                <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#63C5D2] hover:border hover:border-[#63C5D2] hover:bg-transparent ]">Continue
                 </button>
-                <button className='py-3 text-sm text-white'>Already have an account? <span className='text-[#63C5D2] font-bold'> LogIn</span> </button>
             </form>
         </div>
     </div>
   )
 }
 
-export default Signup
+export default Login
