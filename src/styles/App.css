@@ -1,5 +1,44 @@
-.bg{
-    background-color: var(--bg-color);
-    min-height: 100vh;
-    
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.bg {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+  /* background-color: #0077CC; */
+  /* border: 1px solid #0077cc; */
+  background-image: linear-gradient(to bottom, #004b80, #000f19);
+}
+
+.hero-box {
+  background-image: url(../assets/world.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  /* background-clip: content-box; */
+}
+
+.hero-box2 {
+  /* background-image: url(../assets/blocks.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* background-clip: content-box; */
+  /* padding-top: 100px; */
+}
+
+.line::after {
+  content: " ";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: #fff;
+  margin-left: 6px;
+  margin-top: 17px;
+  /* bottom: 0; */
 }
