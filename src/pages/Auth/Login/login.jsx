@@ -1,10 +1,12 @@
 import React from 'react'
 import {MdAlternateEmail, MdLockOutline} from "react-icons/md"
+import Goback from '../../../component/GobackBtn/goback'
 
 
 function Login() {
   return (
     <div>
+        <Goback/>
         <div className="form-wrapper min-h-screen [ p-4 md:p-6 lg:p-8 ] [ flex justify-center items-center ]">
             <form className="max-w-sm rounded-2xl text-[#1A2421] [ p-8 md:p-10 lg:p-10 ] morphism">
                 <h3 className="mb-1 text-md text-[#fff]/80">

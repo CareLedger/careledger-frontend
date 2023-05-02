@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../../component/Navbar/navbar";
 import doctor from "../../../assets/blocks.svg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -22,9 +23,12 @@ const Hero = () => {
             Careledger is a blockchain medical online platform designed to
             manage patient's information efficiently.{" "}
           </p>
-          <button className="border mt-[30px] border-[#63C5D2] bg-[#63C5D2] w-full max-w-[30%] text-[color:var(--text-color)] px-3 py-[8px] rounded-[50px] hover:bg-[#63C5D2] transition-all">
-            Get started
-          </button>
+          <Link to="/signup">
+            <button className="border mt-[30px] border-[#63C5D2] bg-[#63C5D2] w-full max-w-[30%] text-[color:var(--text-color)] px-3 py-[8px] rounded-[50px] hover:bg-[#63C5D2] transition-all">
+              Get started
+            </button>
+          </Link>
+          
           {/* <button className='bg-[#63C5D2] text-[color:var(--text-color)] px-3 py-2 rounded-[5px]' >Get started</button> */}
         </div>
         <div className="w-1/2  pr-[7%]">

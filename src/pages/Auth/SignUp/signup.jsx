@@ -1,14 +1,15 @@
 import React from 'react'
 import {MdAlternateEmail, MdLockOutline} from "react-icons/md"
 import {BiUser} from "react-icons/bi"
-
+import { Link, useNavigate } from 'react-router-dom'
+import Goback from '../../../component/GobackBtn/goback'
 
 function Signup() {
   return (
-    <div>
-        
+    <div className='w-full'>
+        <Goback />
         <div className="form-wrapper min-h-screen [ p-4 md:p-6 lg:p-8 ] [ flex justify-center items-center ]">
-            <form className="max-w-sm rounded-2xl text-[#1A2421] [ p-8 md:p-10 lg:p-10 ] morphism">
+            <form className="max-w-lg rounded-2xl text-[#1A2421] [ p-8 md:p-10 lg:p-10 ] morphism">
                 <h3 className="mb-1 text-md text-[#fff]/80">
                     SignUp Required
                 </h3>
@@ -42,7 +43,9 @@ function Signup() {
                 </div>
                 <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#63C5D2] hover:border hover:border-[#63C5D2] hover:bg-transparent ]">Create an Account
                 </button>
-                <button className='py-3 text-sm text-white'>Already have an account? <span className='text-[#63C5D2] font-bold'> LogIn</span> </button>
+                <Link to="/login">
+                    <button className='py-3 text-sm text-white'>Already have an account? <span className='text-[#63C5D2] font-bold'> LogIn</span> </button>
+                </Link>
             </form>
         </div>
     </div>

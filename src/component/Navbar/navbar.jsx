@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -17,9 +18,12 @@ function Navbar() {
             <li className="text-[color:var(--text-color)]">Contact Us</li>
           </div>
 
-          <li className="bg-[#63C5D2] text-[color:var(--text-color)] px-4 py-[7px] rounded-[50px]">
-            <button>Get started</button>
-          </li>
+          <Link to="/signup">
+            <li className="bg-[#63C5D2] text-[color:var(--text-color)] px-4 py-[7px] rounded-[50px]">
+              <button>Get started</button>
+            </li>
+          </Link>
+          
         </ul>
       </div>
     </div>
