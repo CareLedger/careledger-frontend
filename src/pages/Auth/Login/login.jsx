@@ -8,7 +8,7 @@ function Login() {
     <div>
         <Goback/>
         <div className="form-wrapper min-h-screen [ p-4 md:p-6 lg:p-8 ] [ flex justify-center items-center ]">
-            <form className="max-w-sm rounded-2xl text-[#1A2421] [ p-8 md:p-10 lg:p-10 ] morphism">
+            <form className="max-w-sm rounded-2xl text-[#1A2421] [ p-8 md:p-10 lg:p-10 ]  morphism">
                 <h3 className="mb-1 text-md text-[#fff]/80">
                     LogIn Required
                 </h3>
@@ -33,7 +33,7 @@ function Login() {
                         <input type="password" id="password" placeholder='Password' name="password" required className="form-input block w-full rounded-lg leading-none focus:outline-none placeholder-black/50  [ transition-colors duration-200 ] [ py-3 pr-3 md:py-4 md:pr-4 lg:py-4 lg:pr-4 pl-12 ] [ bg-black/20 focus:bg-black/25 ] [ text-[#333] focus:text-black ]"/>
                     </label>
                 </div>
-                <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#63C5D2] hover:border hover:border-[#63C5D2] hover:bg-transparent ]">Continue
+                <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#00b4b6] hover:border hover:border-[#00b4b6] hover:bg-transparent ]">Continue
                 </button>
             </form>
         </div>
