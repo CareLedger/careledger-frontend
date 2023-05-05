@@ -9,14 +9,14 @@ function Goback() {
         navigate(-1);
     }
   return (
-    <div>
-        <div className='w-full max-w-[80%] ml-[70px] pt-7 text-[#00b4b6] font-bold'>
+    <>
+        <div className='w-full lg:ml-[70px] ml-5 text-[#00b4b6] font-bold' onClick={goBack}>
             <div className='flex items-center gap-x-3 '>
                 <BiArrowBack size={30}/> 
-                <button onClick={goBack}>Go Back</button>
+                <button>Go Back</button>
             </div>
         </div>
-    </div>
+    </>
   )
 }
 
