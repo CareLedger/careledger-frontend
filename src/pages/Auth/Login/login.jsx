@@ -22,17 +22,18 @@ function Login() {
                 </p>
 
                 <div>
-                    <label htmlFor="email" className="form-label relative block mb-4 text-black/50 focus-within:text-[#333]">
+                    <label htmlFor="email" className="form-label relative block mb-4 text-black/50 text-white focus-within:text-[#333]">
                         <MdAlternateEmail className='abel-icon transition pointer-events-none [ w-6 h-6 ] [ absolute top-1/2 left-3 ] [ transform -translate-y-1/2 ]'/>
-                        <input className="form-input block w-full rounded-lg leading-none focus:outline-none placeholder-black/50  [ transition-colors duration-200 ] [ py-3 pr-3 md:py-4 md:pr-4 lg:py-4 lg:pr-4 pl-12 ] [ bg-black/20 focus:bg-black/25 ] [ text-[#333] focus:text-black ]" type="email" name="email" id="email" placeholder="Email" />
+                        <input className="form-input block w-full rounded-lg leading-none focus:outline-none placeholder-black/50  [ transition-colors duration-200 ] focus:bg-white  [ py-3 pr-3 md:py-4 md:pr-4 lg:py-4 lg:pr-4 pl-12 ] [ bg-black/20 focus:bg-[#333]]] [ text-[#fff] focus:text-[#333] ]"
+                            type="email" name="email" id="email" placeholder="Email" />
                     </label>
                 </div>
                 
                 
                 <div className="mb-4">
-                    <label htmlFor="password" className="form-label relative block mb-4 text-black/50 focus-within:text-[#333]">
+                    <label htmlFor="password" className="form-label relative block mb-4 text-black/50 text-white focus-within:text-[#333]">
                         <MdLockOutline className='abel-icon transition pointer-events-none [ w-6 h-6 ] [ absolute top-1/2 left-3 ] [ transform -translate-y-1/2 ]'/>
-                        <input type="password" id="password" placeholder='Password' name="password" required className="form-input block w-full rounded-lg leading-none focus:outline-none placeholder-black/50  [ transition-colors duration-200 ] [ py-3 pr-3 md:py-4 md:pr-4 lg:py-4 lg:pr-4 pl-12 ] [ bg-black/20 focus:bg-black/25 ] [ text-[#333] focus:text-black ]"/>
+                        <input type="password" id="password" placeholder='Password' name="password" required className="form-input block w-full rounded-lg leading-none focus:outline-none placeholder-black/50  [ transition-colors duration-200 ] focus:bg-white  [ py-3 pr-3 md:py-4 md:pr-4 lg:py-4 lg:pr-4 pl-12 ] [ bg-black/20 focus:bg-[#333]]] [ text-[#fff] focus:text-[#333] ]"/>
                     </label>
                 </div>
                 <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#00b4b6] hover:border hover:border-[#00b4b6] hover:bg-transparent ]">Continue
