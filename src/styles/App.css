@@ -1,5 +1,50 @@
-.bg{
-    background-color: var(--bg-color);
-    min-height: 100vh;
-    
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.bg {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+.navBg {
+  backdrop-filter: blur(5px);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+  background-image: linear-gradient(to bottom, #004b80, #000f19);
+}
+
+.hero-box {
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.line::after {
+  content: " ";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: #fff;
+  margin-left: 6px;
+  margin-top: 17px;
+}
+
+@media screen and (max-width: 500px) {
+  .line::after {
+    width: 70px;
+    height: 2px;
+    margin-top: 14px;
+  }
+}
+
+.morphism {
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 180, 182, 0.19);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
 }
