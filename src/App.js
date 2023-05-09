@@ -2,7 +2,11 @@ import Home from "./pages/Home/home";
 import "./styles/App.css";
 import "./styles/variables.css";
 import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  midnightTheme,
+} from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
@@ -10,6 +14,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Signup from "./pages/Auth/SignUp/signup";
 import Login from "./pages/Auth/Login/login";
+import Dashboard from "./pages/Dashboard/dashboard";
 
 function App() {
   const { chains, provider } = configureChains(
@@ -31,13 +36,14 @@ function App() {
 
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider chains={chains} coolModes theme={midnightTheme()}>
         <div className="bg">
           <BrowserRouter>
             <Routes>
               <Route path="/*" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/dashboard/*" element={<Dashboard />} />
             </Routes>
           </BrowserRouter>
         </div>

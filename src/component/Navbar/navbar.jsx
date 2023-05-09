@@ -28,8 +28,8 @@ function Navbar() {
 
           <div className="hidden sm:flex gap-x-5 items-center  ">
             <li className="text-[color:var(--text-color)] ">Home</li>
-            <li className="text-[color:var(--text-color)]">About</li>
             <li className="text-[color:var(--text-color)]">Features</li>
+            <li className="text-[color:var(--text-color)]">Offers</li>
             <li className="text-[color:var(--text-color)]">Contact Us</li>
           </div>
 
@@ -74,17 +74,17 @@ const MobileMenu = ({ handleOpen }) => {
 
       <div className="flex-col flex gap-y-5 items-start mt-[50px] ">
         <li className="text-[color:var(--text-color)] ">Home</li>
-        <li className="text-[color:var(--text-color)]">About</li>
         <li className="text-[color:var(--text-color)]">Features</li>
+        <li className="text-[color:var(--text-color)]">Offers</li>
         <li className="text-[color:var(--text-color)]">Contact Us</li>
       </div>
 
       <div className="flex flex-col gap-y-5 mt-[50px]">
-        <Link to="/signup">
+        {/* <Link to="/signup">
           <li className="hover:bg-[#00b4b6] border [ transition-colors duration-500 ] border-[#00b4b6] text-[color:var(--text-color)] px-4 py-[7px] rounded-[7px]">
             <button className="w-full">Connect to Cello wallet</button>
           </li>
-        </Link>
+        </Link> */}
 
         <ConnectButton />
 
