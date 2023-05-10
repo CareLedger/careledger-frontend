@@ -10,6 +10,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Signup from "./pages/Auth/SignUp/signup";
 import Login from "./pages/Auth/Login/login";
+import AdminLayout from "./layouts/admin-dashboard-layout/AdminLayout";
 
 function App() {
   const { chains, provider } = configureChains(
@@ -38,6 +39,7 @@ function App() {
               <Route path="/*" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/admin/*" element={<AdminLayout />} />
             </Routes>
           </BrowserRouter>
         </div>
