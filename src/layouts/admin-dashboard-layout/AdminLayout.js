@@ -11,7 +11,6 @@ import {
   AdminDashboardHeader,
   AdminHeaderContainer,
   AvatarContainer,
-
   MainContentArea,
   NotificationContainer,
   ParentContainer,
@@ -77,7 +76,6 @@ const AdminLayout = () => {
               path="/doctors"
               element={<Doctors />}
             />
-
             <Route path="/chat-box" element={<ChatBox />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>

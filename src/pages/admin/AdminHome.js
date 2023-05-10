@@ -120,7 +120,7 @@ const AdminHome = () => {
 
         </ActivitiesContainer>
         <LowerContainer>
-
+        
         </LowerContainer>
       </CenterWrapper>
     </AdminHomeParent>

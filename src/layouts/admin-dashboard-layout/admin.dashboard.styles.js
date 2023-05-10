@@ -68,7 +68,7 @@ export const SearchBarForm = styled.div`
     border: 0;
     outline: none;
     background: #fff;
-    color: #726e6e;
+    color: #00B4B6;
     font-size: 1.1rem;
 
   }
@@ -86,9 +86,10 @@ export const SearchBarForm = styled.div`
     height: 10px;
   }
   & button img {
-    width: 10px;
-    height: 10px;
-    margin: 5px 10px;
+    width: 12px;
+    height: 12px;
+    margin-top: 1rem;
+    margin-right: 1rem;
   }
 `;
 

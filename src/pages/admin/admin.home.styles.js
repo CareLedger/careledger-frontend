@@ -130,6 +130,10 @@ export const BarChartContainer = styled.div`
   color: #00B4B6;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5em;
+
+  & h1{
+    color: #00B4B6;
+  }
   
 
 `;
@@ -166,6 +170,10 @@ export const HContainer = styled.div`
   width:100%;
   display:flex;
   flex-direction: column;
+
+  & h1 {
+ color: #00B4B6;
+  }
   
 
 `;
