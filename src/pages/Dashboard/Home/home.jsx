@@ -1,7 +1,5 @@
 import React from "react";
-import girl from "../../../assets/girl1.jpg"
-import girl1 from "../../../assets/girrl.jpg"
-import man from "../../../assets/man1.jpg"
+
 import {
   FaUser,
   FaFileUpload,
@@ -18,6 +16,7 @@ import {
   Legend,
 } from "recharts";
 import { DashboardCardData } from "../../../Utils/dashboardCardData";
+import PatientTableData from "../../../component/PatientTableData/patientTableData";
 
 const data = [
   { name: "Jan", uploads: 10 },
@@ -34,45 +33,13 @@ const data = [
   { name: "Dec", uploads: 40 },
 ];
 
-const tableData = [
-  {
-    id: 1,
-    media: girl,
-    patientId: "P0001",
-    name: "John Doe",
-    age: 32,
-    address: "123 Main Street",
-    number: "+1-555-555-5555",
-    status: "Active",
-  },
-  {
-    id: 2,
-    media: girl1,
-    patientId: "P0002",
-    name: "Jane Smith",
-    age: 45,
-    address: "456 Oak Avenue",
-    number: "+1-555-555-5555",
-    status: "Inactive",
-  },
-  {
-    id: 2,
-    media: man,
-    patientId: "P0002",
-    name: "Jane Smith",
-    age: 45,
-    address: "456 Oak Avenue",
-    number: "+1-555-555-5555",
-    status: "Inactive",
-  },
-  // more data...
-];
+
 
 function MainContent() {
   return (
     <div className="flex-grow py-[20px] px-[30px]">
-      <h1 className="text-3xl text-white mb-1 mt-[5px]">
-        Welcome back, Bisola 👋 
+      <h1 className="text-3xl mb-1 mt-[5px] text-[#00b4b6] font-bold">
+        Welcome back, Bisola 👋
       </h1>
       <p className="text-[15px] text-gray-400">
         This is the latest update for the last 7 days, check now!
@@ -86,9 +53,7 @@ function MainContent() {
                 <div className="w-full flex flex-col gap-y-2">
                   <div className="flex items-center justify-between w-full">
                     <div className="flex items-center gap-x-2 w-full">
-                      <div className="mb-2">
-                        {item.icon}
-                      </div>
+                      <div className="mb-2">{item.icon}</div>
                       <div>
                         <h2 className=" text-white text-sm font-medium mb-2">
                           {item.title}
@@ -104,7 +69,7 @@ function MainContent() {
                   </div>
                   <div className="flex items-center gap-x-5">
                     <p className="text-gray-400 text-3xl font-bold">1,000</p>
-                    <p className="bg-[#ffffff10] py-1 px-2 text-white rounded-[14px]">
+                    <p className="bg-[#ffffff10] py-1 px-2 text-[#46f0f3] rounded-[14px]">
                       + 10.4%
                     </p>
                   </div>
@@ -141,79 +106,15 @@ function MainContent() {
           <Line
             type="monotone"
             dataKey="uploads"
-            stroke="#8884d8"
+            stroke="#00b4b6"
             activeDot={{ r: 8 }}
           />
         </LineChart>
       </div>
+        
+      <PatientTableData/>
 
-      <table className="min-w-full divide-y divide-gray-700 mt-[50px]">
-        <thead className="bg-gray-800">
-          <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-              Media
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-              Patient ID
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-              Name
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-              Age
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-              Address
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-              Number
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-              Status
-            </th>
-          </tr>
-        </thead>
 
-        <tbody className="bg-gray-900 divide-y divide-gray-700">
-          {tableData.map((item) => {
-            return (
-              <tr key={item.id}>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10">
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src={item.media}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.patientId}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm font-medium text-gray-400">
-                    {item.name}
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.age}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.address}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.number}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-400">{item.status}</div>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
     </div>
   );
 }

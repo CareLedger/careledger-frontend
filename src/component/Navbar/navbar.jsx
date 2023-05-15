@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
+import  CustomConnectBtn  from "../CustomConnectBtn/CustomConnectBtn";
+
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -40,7 +42,7 @@ function Navbar() {
               </li>
             </Link> */}
 
-            <ConnectButton />
+            <CustomConnectBtn />
 
             <Link to="/signup">
               <li className="bg-[#00b4b6] hover:border hover:border-[#00b4b6] hover:bg-transparent [ transition-colors duration-500 ]  text-[color:var(--text-color)] px-4 py-[7px] rounded-[7px]">
@@ -86,7 +88,7 @@ const MobileMenu = ({ handleOpen }) => {
           </li>
         </Link> */}
 
-        <ConnectButton />
+        {/* <ConnectButton /> */}
 
 
         <Link to="/signup">

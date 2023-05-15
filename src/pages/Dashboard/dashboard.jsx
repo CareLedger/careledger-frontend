@@ -5,6 +5,7 @@ import MainContent from "./Home/home";
 import PatientsDashboard from "./PatientsDashboard/patientsDashboard";
 import Patients from "./Patients/patients";
 import DoctorsDashboard from "./DoctorsDashboard/doctors";
+import PatientsInfo from "./PatientsInfo/patientsInfo";
 import { Route, Routes } from "react-router-dom";
 import {AiOutlineHome} from "react-icons/ai"
 import {MdOutlineDashboardCustomize} from "react-icons/md"
@@ -12,9 +13,9 @@ import {TbLayoutDashboard} from "react-icons/tb"
 
 const links = [
   { name: "Home", path: "/dashboard", icon:<AiOutlineHome size={20}/>},
-  { name: "Patients Dashboard", path: "/dashboard/patients-dashboard", icon:<MdOutlineDashboardCustomize size={25}/>},
-  { name: "Doctors Dashboard", path: "/dashboard/doctors", icon:<TbLayoutDashboard size={25}/> },
-  { name: "Patients", path: "/dashboard/patients-list" , icon:<TbLayoutDashboard size={25}/> },
+  { name: "Patients Database", path: "/dashboard/patients-dashboard", icon:<MdOutlineDashboardCustomize size={25}/>},
+  { name: "Add A Patient", path: "/dashboard/patients-list" , icon:<TbLayoutDashboard size={25}/> },
+  // { name: "Add A Patient", path: "/dashboard/doctors", icon:<TbLayoutDashboard size={25}/> },
 ];
 
 function Dashboard() {
@@ -33,6 +34,7 @@ function Dashboard() {
           <Route path="/patients-dashboard" element={<PatientsDashboard />} />
           <Route path="/doctors" element={<DoctorsDashboard />} />
           <Route path="/patients-list" element={<Patients />} />
+          <Route path="/patients-info" element={<PatientsInfo />} />
         </Routes>
       </div>
     </div>

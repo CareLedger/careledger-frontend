@@ -7,7 +7,14 @@ import {
   RainbowKitProvider,
   midnightTheme,
 } from "@rainbow-me/rainbowkit";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
+import {
+  WagmiConfig,
+  createClient,
+  configureChains,
+  Chain,
+  chain,
+} from "wagmi";
+import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
@@ -17,9 +24,35 @@ import Login from "./pages/Auth/Login/login";
 import Dashboard from "./pages/Dashboard/dashboard";
 
 function App() {
-  const { chains, provider } = configureChains(
-    [mainnet, polygon, optimism, arbitrum],
-    [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()]
+  const celoChain = {
+    id: 44787,
+    name: "Celo Testnet",
+    network: "avalanche",
+    nativeCurrency: {
+      decimals: 18,
+      name: "Celo Alfajores Testnet",
+      symbol: "CELO",
+    },
+    rpcUrls: {
+      default: "https://alfajores-forno.celo-testnet.org",
+    },
+    blockExplorers: {
+      default: { name: "CeloExplorer", url: "https://docs.celo.org/" },
+      snowtrace: { name: "SnowTrace", url: "https://snowtrace.io" },
+    },
+    testnet: false,
+  };
+
+  // const { chains, provider } = configureChains(
+  //   [mainnet, polygon, optimism, arbitrum],
+  //   [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()],
+  //   [celoChain],
+  //   [jsonRpcProvider({ rpc: (chain) => ({ http: chain.rpcUrls.default }) })]
+  // );
+
+  const { provider, chains } = configureChains(
+    [celoChain],
+    [jsonRpcProvider({ rpc: (chain) => ({ http: chain.rpcUrls.default }) })]
   );
 
   const { connectors } = getDefaultWallets({

@@ -23,8 +23,6 @@ function TopBar() {
         </span>
         <input
           type="text"
-          //   value={query}
-          //   onChange={handleInputChange}
           placeholder="Search anything here"
           className="pl-10 pr-4 py-2 rounded-lg bg-transparent  flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
         />
@@ -34,8 +32,8 @@ function TopBar() {
         <div className="relative">
           {/* Notification bell */}
           <div className="absolute right-0 top-0 -mr-2 -mt-2">
-            <div className="bg-red-500 rounded-full w-4 h-4 animate-ping"></div>
-            <div className="bg-red-500 rounded-full w-4 h-4 absolute"></div>
+            <div className="bg-[#e20707] rounded-full w-4 h-4 animate-ping"></div>
+            <div className="bg-[#e20707] rounded-full w-4 h-4 absolute"></div>
           </div>
           <FaBell size={20} />
         </div>

@@ -40,7 +40,7 @@ const Patients = () => {
           placeholder="First Name"
           value={formData.firstName}
           onChange={handleChange}
-          className="rounded-lg border-2 border-gray-600 h-[45px] w-[32%] p-2 bg-transparent"
+          className="rounded-lg border-2 text-white outline-none morphism shadow border-gray-600 h-[45px] w-[32%] p-2 bg-transparent"
           required
         />
 
@@ -50,7 +50,7 @@ const Patients = () => {
           placeholder="Last Name"
           value={formData.lastName}
           onChange={handleChange}
-          className="rounded-lg border-2 border-gray-600 h-[45px] w-[32%] p-2 bg-transparent"
+          className="rounded-lg border-2 text-white outline-none morphism shadow border-gray-600 h-[45px] w-[32%] p-2 bg-transparent"
           required
         />
 
@@ -60,7 +60,7 @@ const Patients = () => {
           placeholder="Phone Number"
           value={formData.phone}
           onChange={handleChange}
-          className="rounded-lg border-2 border-gray-600 h-[45px] w-[32%] p-2 bg-transparent"
+          className="rounded-lg border-2 text-white outline-none morphism shadow border-gray-600 h-[45px] w-[32%] p-2 bg-transparent"
           required
         />
 
@@ -70,7 +70,7 @@ const Patients = () => {
           placeholder="Age"
           value={formData.age}
           onChange={handleChange}
-          className="rounded-lg border-2 border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
+          className="rounded-lg border-2 text-white outline-none morphism shadow border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
           required
         />
 
@@ -79,7 +79,7 @@ const Patients = () => {
           name="date"
           value={formData.date}
           onChange={handleChange}
-          className="rounded-lg border-2 text-gray-600 border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
+          className="rounded-lg border-2 text-white morphism shadow outline-none text-gray-600 border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
           required
         />
 
@@ -87,7 +87,7 @@ const Patients = () => {
           name="gender"
           value={formData.gender}
           onChange={handleChange}
-          className="rounded-lg border-2 text-gray-600 border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
+          className="rounded-lg text-white border-2 outline-none morphism shadow  border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
           required
           placeholder="Gender"
         >
@@ -101,26 +101,47 @@ const Patients = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="rounded-lg border-2 border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
+          className="rounded-lg text-white border-2 outline-none morphism shadow border-gray-600 h-[45px] w-[24%] p-2 bg-transparent"
           required
-          placeholder="Enter Your Email"
+          placeholder="Enter Patient Email"
+        />
+
+        <input
+          type="text"
+          name="text"
+          placeholder="Name of Test Taken"
+          // value={formData.firstName}
+          onChange={handleChange}
+          className="rounded-lg outline-none morphism shadow border-2 text-white border-gray-600 h-[45px] w-[48%] p-2 bg-transparent"
+          required
+        />
+
+        <input
+          type="text"
+          name="text"
+          placeholder="Test Results"
+          // value={formData.lastName}
+          onChange={handleChange}
+          className="rounded-lg border-2 text-white outline-none morphism shadow border-gray-600 h-[45px] w-[48%] p-2 bg-transparent"
+          required
         />
 
         <input
           type="file"
           name="file"
-          value={formData.email}
+          // value={formData.email}
           onChange={handleChange}
-          className="rounded-lg border-2 text-gray-600 border-gray-600 h-[45px] w-full p-2 bg-transparent"
+          className="rounded-lg border-2 outline-none morphism shadow text-gray-600 border-gray-600 h-[45px] w-full p-2 bg-transparent"
           required
           placeholder="Input file"
         />
+        
 
         <textarea
           name="description"
           value={formData.description}
           onChange={handleChange}
-          className="rounded-lg border-2 bg-transparent w-full border-gray-600 p-2"
+          className="rounded-lg border-2 bg-transparent outline-none morphism shadow w-full border-gray-600 p-4"
           placeholder="Patient Description"
           rows={6}
         />
