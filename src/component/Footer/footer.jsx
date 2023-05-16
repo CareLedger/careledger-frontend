@@ -13,7 +13,7 @@ const Footer = () => {
                 Logo
               </li>
             </div>
-            <div className="flex gap-x-5 items-center mt-[30px] sm:mt-[0px]">
+            <div className="flex gap-x-5 items-center mt-[30px] sm:mt-[0px] text-[12px] md:text-[13px]">
               <li className="text-[color:var(--text-color)]">Home</li>
               <li className="text-[color:var(--text-color)]">About</li>
               <li className="text-[color:var(--text-color)]">Features</li>
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-[20px] sm:mt-[0px]">
+          <div className="mt-[20px] sm:mt-[0px] text-[12px] md:text-[14px]">
             <p className="text-white">&copy; CareLedger 2023</p>
           </div>
         </div>

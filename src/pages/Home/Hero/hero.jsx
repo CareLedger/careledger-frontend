@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <div className="w-full">
       <Navbar />
-      <div className="w-full max-w-[85%] m-auto flex-col-reverse md:flex-row flex h-[100vh] pt-[100px] pb-[50px] justify-center items-center">
+      <div className="w-full max-w-[85%] m-auto flex-col-reverse md:flex-row flex max-h-[700px] md:max-h-[100vh] h-[100vh] pt-[100px] pb-[50px] justify-center items-center">
         <div className="md:w-[50%] w-full flex mt-[20px] flex-col hero-box ">
-          <h1 className="text-[color:var(--text-color)] mt-[40px] text-[25px] md:text-[50px] w-[90%] max-w-[405px]  leading-[1.2] font-bold">
+          <h1 className="text-[color:var(--text-color)] mt-[40px] text-[25px] md:text-[50px] md:w-[90%] max-w-[405px]  leading-[1.2] font-bold">
             Take Your{" "}
             <span className="bg-gradient-to-r from-[#00b4b6] to-[#ff6982] text-transparent bg-clip-text">
               Clinical Trials
@@ -19,8 +19,8 @@ const Hero = () => {
               Next Level
             </span>
           </h1>
-          <p className="text-[color:var(--text-color)] text-[15px] w-[80%] mt-[20px] leading-[25px]">
-            Careledger is a blockchain medical online platform designed to
+          <p className="text-[color:var(--text-color)] text-[15px] w-full md:w-[80%] mt-[20px] leading-[25px]">
+            Careledger is a blockchain medical online platform designed to help hospitals
             manage patient's information efficiently.{" "}
           </p>
           <Link to="/signup">
