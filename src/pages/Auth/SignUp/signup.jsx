@@ -68,9 +68,12 @@ function Signup() {
               />
             </label>
           </div>
-          <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#00b4b6] hover:border hover:border-[#00b4b6] hover:bg-transparent ]">
-            Create an Account
-          </button>
+          <Link to="/dashboard">
+            <button className="form-input w-full rounded-lg font-bold text-white focus:outline-none [ p-3 md:p-4 lg:p-3 ] [ transition-colors duration-500 ] [ bg-[#00b4b6] hover:border hover:border-[#00b4b6] hover:bg-transparent ]">
+              Create an Account
+            </button>
+          </Link>
+          
           <Link to="/login">
             <button className="py-3 text-sm text-white">
               Already have an account?{" "}
